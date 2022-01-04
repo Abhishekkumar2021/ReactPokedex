@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card";
+// import State from './components/State'
+// import RandomNumberCard from "./components/RandomNumberCard";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const arr = [];
+	for (let i = 1; i <= 898; i++) {
+		arr.push(i);
+	}
+	return (
+		<div className="App">
+			{arr.map((m) => (
+				<Card id={m} />
+			))}
+			{/* <RandomNumberCard /> */}
+		</div>
+	);
 }
 
 export default App;
